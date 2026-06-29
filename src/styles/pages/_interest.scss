@@ -1,0 +1,35 @@
+// Interests කොටසේ ස්ටයිල්
+.interests-section {
+  padding: 1.5rem 0 3rem 0;
+  border-bottom: 1px solid $surface-color;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: $accent-color;
+  }
+
+  .interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .interest-item {
+    background-color: $surface-color;
+    padding: 1.25rem;
+    border-radius: 6px;
+    border: 1px solid rgba($accent-color, 0.1);
+
+    h3 {
+      font-size: 1.1rem;
+      color: $text-main;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: $text-muted;
+      font-size: 0.9rem;
+    }
+  }
+}

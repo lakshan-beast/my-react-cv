@@ -1,0 +1,128 @@
+// src/styles/main.scss (Skills & Education Styles)
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; // වම් පැත්තේ Skills, දකුණු පැත්තේ Education
+  gap: 2.5rem;
+  padding: 3rem 0;
+  border-bottom: 1px solid $surface-color;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; // මොබයිල් ෆෝන් වලදී එකක් යට එකක් පෙනේ
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: $accent-color;
+  }
+}
+
+// Skills කොටසේ ස්ටයිල්
+.skills-section {
+  .skills-group {
+    margin-bottom: 1.5rem;
+
+    h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: $text-main;
+    }
+  }
+
+  .skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    span {
+      background-color: $surface-color;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+// src/styles/main.scss ඇතුළත
+
+.skills-section {
+  .skills-group {
+    margin-bottom: 1.25rem; // Groups අතර පරතරය තරමක් අඩු කර පිළිවෙළක් කළා
+
+    h3 {
+      font-size: 1.05rem;
+      color: $accent-color; // Group මාතෘකා Neon Green වර්ණයෙන් ලස්සන කළා
+      margin-bottom: 0.4rem;
+    }
+  }
+}
+
+// Education කොටසේ ස්ටයිල්
+.education-section {
+  .edu-item {
+    margin-bottom: 1.5rem;
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .school {
+      color: $accent-color;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+
+    .year {
+      color: $text-muted;
+      font-size: 0.85rem;
+    }
+  }
+}
+
+// ==========================================
+// PRINT STYLES කොටස ඇතුළට මේක දාන්න
+// ==========================================
+@media print {
+  .info-grid {
+    display: block !important; // Print එකේදී Grid එක අයින් වී එක පෙළට සැකසේ
+    padding: 1rem 0 !important;
+    border-bottom: 1px solid #000 !important;
+
+    h2 {
+      font-size: 14pt !important;
+      color: #000 !important;
+      margin-bottom: 0.5rem !important;
+    }
+  }
+
+  .skills-section,
+  .education-section {
+    margin-bottom: 1rem !important;
+    page-break-inside: avoid;
+  }
+
+  .skills-tags span {
+    background: none !important;
+    border: 1px solid #ccc !important;
+    color: #000 !important;
+    font-size: 9pt !important;
+    padding: 0.1rem 0.4rem !important;
+  }
+
+  .edu-item {
+    margin-bottom: 0.75rem !important;
+    h3 {
+      font-size: 11pt !important;
+    }
+    .school {
+      color: #000 !important;
+      font-size: 10pt !important;
+    }
+    .year {
+      color: #444 !important;
+      font-size: 9pt !important;
+    }
+  }
+}

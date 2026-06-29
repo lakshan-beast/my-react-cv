@@ -1,0 +1,135 @@
+// ==========================================
+// 5. PRINT STYLES (CV එක PDF කරද්දී වැඩ කරන කොටස)
+// ==========================================
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt;
+  }
+
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .btn-print {
+    display: none !important; // Print එකේදී Button එක හැංගෙනවා
+  }
+
+  .hero-section {
+    padding: 0 0 1.5rem 0 !important;
+    border-bottom: 2px solid #000000 !important;
+
+    h1 {
+      font-size: 24pt !important;
+      color: #000000 !important;
+    }
+
+    .title {
+      font-size: 14pt !important;
+      color: #333333 !important;
+      margin-bottom: 0.5rem !important;
+    }
+
+    .summary {
+      color: #222222 !important;
+      font-size: 11pt !important;
+    }
+
+    .contact-info {
+      margin-top: 0.5rem !important;
+      color: #000000 !important;
+      font-size: 10pt !important;
+    }
+  }
+
+  // ==========================================
+  // @media print ඇතුළටම එකතු කරන්න
+  // ==========================================
+  .experience-section,
+  .interests-section {
+    padding: 0.75rem 0 !important;
+    border-bottom: 1px solid #000 !important;
+    page-break-inside: avoid; // මැදින් පිටු කැඩී යාම වැළැක්වීමට
+
+    h2 {
+      font-size: 14pt !important;
+      color: #000 !important;
+      margin-bottom: 0.5rem !important;
+    }
+  }
+
+  .experience-card {
+    background: transparent !important;
+    border: none !important;
+    border-left: 2px solid #000 !important; // Print එකේදී කළු ඉරක් වෙනවා
+    padding: 0 0 0 0.5rem !important;
+
+    h3 {
+      font-size: 11pt !important;
+      color: #000 !important;
+      .date {
+        color: #000 !important;
+      }
+    }
+    .company {
+      color: #000 !important;
+      font-size: 10pt !important;
+    }
+    p {
+      color: #222 !important;
+      font-size: 9.5pt !important;
+    }
+  }
+
+  .interests-grid {
+    display: block !important; // Grid එක අයින් වී එක පෙළට සැකසේ
+  }
+
+  .interest-item {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin-bottom: 0.5rem !important;
+
+    h3 {
+      font-size: 10.5pt !important;
+      color: #000 !important;
+      margin-bottom: 0.1rem !important;
+
+      // Chess, Ethical Hacking වගේ මාතෘකා ඉදිරියෙන් පොඩි තිතක් තැබීමට
+      &:before {
+        content: "• ";
+        color: #000;
+      }
+    }
+    p {
+      color: #333 !important;
+      font-size: 9.5pt !important;
+    }
+  }
+
+  // ==========================================
+  // @media print ඇතුළටම එකතු කරන්න
+  // ==========================================
+  .project-links {
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.5rem !important;
+    gap: 1.5rem !important;
+
+    a {
+      color: #000000 !important;
+      font-size: 8.5pt !important;
+
+      // මේ කේතයෙන් වෙබ් එකේ තියෙන "Live Demo" කියන එක වෙනුවට,
+      // Print එකේදී "Live Demo: https://..." ලෙස ලින්ක් එකම අකුරෙන් පෙනේ!
+      &:after {
+        content: ": " attr(href);
+        font-weight: normal;
+        color: #444;
+      }
+    }
+  }
+}
