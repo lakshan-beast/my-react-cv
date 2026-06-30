@@ -2,7 +2,7 @@
 
 .info-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; // වම් පැත්තේ Skills, දකුණු පැත්තේ Education
+  grid-template-columns: 1fr; // වම් පැත්තේ Skills, දකුණු පැත්තේ Education
   gap: 2.5rem;
   padding: 3rem 0;
   border-bottom: 1px solid $surface-color;
@@ -27,6 +27,9 @@
       font-size: 1.1rem;
       margin-bottom: 0.5rem;
       color: $text-main;
+
+      border-top: 1px solid rgba($text-muted, 0.6);
+      padding-top: 6px;
     }
   }
 
@@ -52,7 +55,7 @@
 
     h3 {
       font-size: 1.05rem;
-      color: $accent-color; // Group මාතෘකා Neon Green වර්ණයෙන් ලස්සන කළා
+      color: rgba($accent-color, 0.6);
       margin-bottom: 0.4rem;
     }
   }
@@ -66,17 +69,23 @@
     h3 {
       font-size: 1.2rem;
       margin-bottom: 0.2rem;
+      border-top: 1px solid rgba($text-muted, 0.6);
+      padding-top: 6px;
     }
 
     .school {
-      color: $accent-color;
+      color: rgba($accent-color, 0.7);
       font-weight: 500;
       font-size: 1rem;
     }
 
     .year {
-      color: $text-muted;
+      background-color: rgba($text-muted, 0.2);
+      color: $accent-color;
+      border-radius: 6px;
       font-size: 0.85rem;
+      padding: 4px 12px;
+      display: inline-block;
     }
   }
 }
@@ -101,6 +110,16 @@
   .education-section {
     margin-bottom: 1rem !important;
     page-break-inside: avoid;
+
+    .skills-group {
+      margin-bottom: 1.25rem; // Groups අතර පරතරය තරමක් අඩු කර පිළිවෙළක් කළා
+
+      h3 {
+        font-size: 1.05rem;
+        color: $text-muted;
+        margin-bottom: 0.4rem;
+      }
+    }
   }
 
   .skills-tags span {

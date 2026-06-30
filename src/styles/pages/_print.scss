@@ -30,7 +30,7 @@
     .title {
       font-size: 14pt !important;
       color: #333333 !important;
-      margin-bottom: 0.5rem !important;
+      //   margin-bottom: 0.5rem !important;
     }
 
     .summary {
@@ -42,6 +42,11 @@
       margin-top: 0.5rem !important;
       color: #000000 !important;
       font-size: 10pt !important;
+
+      a {
+        margin: 0;
+        padding: 0;
+      }
     }
   }
 
@@ -65,7 +70,7 @@
     background: transparent !important;
     border: none !important;
     border-left: 2px solid #000 !important; // Print එකේදී කළු ඉරක් වෙනවා
-    padding: 0 0 0 0.5rem !important;
+    padding: 0 0.5rem !important;
 
     h3 {
       font-size: 11pt !important;
@@ -130,6 +135,49 @@
         font-weight: normal;
         color: #444;
       }
+    }
+  }
+}
+
+// ==========================================
+// PRINT STYLES කොටස ඇතුළට මේක දාන්න (දැනටමත් ඇති)
+// ==========================================
+@media print {
+  .projects-section {
+    padding: 1rem 0 !important;
+    border-bottom: 1px solid #000 !important;
+
+    h2 {
+      font-size: 14pt !important;
+      color: #000 !important;
+      margin-bottom: 0.5rem !important;
+    }
+  }
+
+  .projects-grid {
+    display: block !important; // Print එකේදී Grid එක සාමාන්‍ය ලැයිස්තුවක් වෙනවා
+  }
+
+  .project-card {
+    background: transparent !important;
+    border: none !important;
+    border-left: 3px solid #000 !important; // වමෙන් ඉරක් දමා ලස්සන කිරීම
+    padding: 0.5rem 0 0.5rem 0.75rem !important;
+    margin-bottom: 1rem !important;
+    page-break-inside: avoid; // මැදින් පිටු කැඩී යාම වැළැක්වීමට
+
+    h3 {
+      font-size: 11pt !important;
+    }
+    p {
+      color: #333 !important;
+      font-size: 10pt !important;
+    }
+    .tech-stack span {
+      background: none !important;
+      color: #000 !important;
+      border: 1px solid #000 !important;
+      font-size: 8pt !important;
     }
   }
 }
