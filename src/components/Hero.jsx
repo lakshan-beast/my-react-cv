@@ -9,8 +9,8 @@ const Hero = () => {
 
   return (
     <section className="hero-section">
-      <h1>Frontend Developer</h1>
-      <h2>Lakshan Sandeepa</h2>
+      <h1>Lakshan Sandeepa</h1>
+      <h2>Frontend Developer</h2>
       <p className="title">UI/UX Visual Engineering & Security Enthusiast</p>
 
       <p className="summary">
@@ -27,17 +27,41 @@ const Hero = () => {
       </p>
 
       <div className="contact-info">
-        <span>📧 lakshansandeepa0305@gmail.com</span>
-        <span>📞 +94 707046840</span>
-        <span>📍 Kandy / Sri Lanka</span>
+        <div className="contact-links">
+          <a
+            href="mailto:lakshansandeepa0305@gmail.com"
+            target="_blank"
+            rel="noreferrer">
+            lakshansandeepa0305@gmail.com
+          </a>
+          <a href="tel:+94 707046840">+94 707046840</a>
+          <span>Kandy / Sri Lanka</span>
+        </div>
 
-        <hr />
-        <span>https://lakshan-sandeepa-dev.vercel.app/</span>
-        <span>https://www.linkedin.com/in/lakshan-sandeepa</span>
-        <span>https://www.linkedin.com/in/lakshan-sandeepa</span>
+        <div className="socail-links">
+          <a
+            href="https://lakshan-sandeepa-dev.vercel.app/"
+            target="_blank"
+            rel="noreferrer">
+            Portofolio
+          </a>
+          <a
+            href="https://www.linkedin.com/in/lakshan-sandeepa"
+            target="_blank"
+            rel="noreferrer">
+            Linkedin Profile
+          </a>
+          <a
+            href="https://github.com/lakshan-beast"
+            target="_blank"
+            rel="noreferrer">
+            Github Profile
+          </a>
+
+          <a href=""></a>
+        </div>
       </div>
 
-      {/* මේ බටන් එක ක්ලික් කළ විට වෙබ් පිටුව CV එකක් ලෙස මුද්‍රණය වේ */}
       <button onClick={handlePrint} className="btn-print">
         Print / Save as PDF CV
       </button>
