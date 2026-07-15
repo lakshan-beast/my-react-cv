@@ -1,86 +1,320 @@
+// .container {
+//   max-width: 1000px;
+//   margin: 0 auto;
+//   padding: 2rem;
+// }
+
+// // 3. බටන් එකේ ස්ටයිල් (Button Style)
+// .btn-print {
+//   background-color: $accent-color;
+//   color: $bg-color;
+//   padding: 0.75rem 1.5rem;
+//   border: none;
+//   border-radius: 6px;
+//   font-weight: bold;
+//   font-size: 1rem;
+//   cursor: pointer;
+//   transition: all 0.2s ease-index;
+//   margin-top: 1.5rem;
+
+//   &:hover {
+//     background-color: lighten($accent-color, 10%);
+//     transform: translateY(-2px);
+//   }
+// }
+
+// // 4. Hero Section එකේ ස්ටයිල්
+// .hero-section {
+//   padding: 4rem 0;
+//   border-bottom: 1px solid $surface-color;
+
+//   h1 {
+//     font-size: 3rem;
+//     color: $text-main;
+//     // margin-bottom: 0.5rem;
+//     border-bottom: 2px solid rgba($text-main, 0.5);
+//   }
+
+//   h2 {
+//     color: rgba($text-main, 0.9);
+//     font-size: 2rem;
+//   }
+
+//   .title {
+//     font-size: 1.3rem;
+//     color: $accent-color;
+//     font-weight: 500;
+//     margin-bottom: 1.5rem;
+//   }
+
+//   .summary {
+//     color: $text-muted;
+//     font-size: 1.1rem;
+//     // max-width: 800px;
+//   }
+
+//   .contact-info {
+//     margin-top: 1.5rem;
+//     color: $text-muted;
+//     // border-top: 1px solid rgba($text-main, 0.5);
+
+//     .contact-links,
+//     .socail-links {
+//       display: flex;
+//       justify-content: flex-start;
+//       //   align-items: center;
+//       flex-direction: column;
+//       //   gap: 12px;
+//       //   margin: 0.7rem 0;
+//       border-bottom: 1px solid rgba($text-main, 0.5);
+
+//       span,
+//       a {
+//         margin: 0.5rem 0;
+//         display: inline-block;
+//         padding: 0 12px;
+//         border-left: 5px solid rgba($text-main, 0.3);
+//         border-radius: 6px;
+//       }
+//     }
+
+//     a {
+//       color: white;
+//       text-decoration: none;
+//     }
+//   }
+// }
+
+/* ========================================================
+   2026 NEXT-GEN CV PORTFOLIO - HERO REPOSITORY SECTION SASS
+   ======================================================== */
+
 .container {
-  max-width: 1000px;
+  max-width: 1100px; /* දත්ත ලස්සනට පේන්න පළල 1100px සීමාවට ගත්තා */
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 4%;
+  box-sizing: border-box;
 }
 
-// 3. බටන් එකේ ස්ටයිල් (Button Style)
-.btn-print {
-  background-color: $accent-color;
-  color: $bg-color;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: all 0.2s ease-index;
-  margin-top: 1.5rem;
-
-  &:hover {
-    background-color: lighten($accent-color, 10%);
-    transform: translateY(-2px);
-  }
-}
-
-// 4. Hero Section එකේ ස්ටයිල්
+// 🏢 MAIN ASYMMETRIC BENTO SPLIT SYSTEM
 .hero-section {
+  gap: 24px;
   padding: 4rem 0;
-  border-bottom: 1px solid $surface-color;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 
-  h1 {
-    font-size: 3rem;
-    color: $text-main;
-    // margin-bottom: 0.5rem;
-    border-bottom: 2px solid rgba($text-main, 0.5);
+  @media (min-width: 900px) {
+   // 💻 Laptop/Desktop වලදී පැනල් 2ක Luxury Split එකක් වේ
+    align-items: stretch;
   }
 
-  h2 {
-    color: rgba($text-main, 0.9);
-    font-size: 2rem;
+  /* ========================================================
+     🛸 PANEL A: THE IDENTITY PROFILE BENTO CARD (වම් පැත්තේ පැනලය)
+     ======================================================== */
+  .profile-identity-bento-card {
+    background: linear-gradient(
+      135deg,
+      rgba(15, 23, 42, 0.55) 0%,
+      rgba(30, 41, 59, 0.25) 100%
+    );
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 24px;
+    padding: 35px 30px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    text-align: left;
+
+    // Main Full Name String
+    .developer-main-name {
+      margin: 0 0 4px 0;
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: #ffffff; // පිරිසිදු සුදු පැහැය
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    // Core Role Title
+    .developer-core-role {
+      margin: 0 0 12px 0;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.35rem;
+      font-weight: 750;
+      letter-spacing: -0.01em;
+    }
+
+    // Cyber Sub-Title Heading
+    .title {
+      font-size: 0.9rem;
+      color: #00f1d1; // Main Brand Neon Teal කර පත්තු කළා
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin: 0 0 30px 0;
+      background: rgba(0, 241, 209, 0.06);
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px solid rgba(0, 241, 209, 0.12);
+    }
   }
 
-  .title {
-    font-size: 1.3rem;
-    color: $accent-color;
-    font-weight: 500;
-    margin-bottom: 1.5rem;
+  /* ========================================================
+     🧠 PANEL B: THE EXECUTIVE VAULT CORE SUMMARY (දකුණු පැත්තේ පැනලය)
+     ======================================================== */
+  .profile-summary-bento-card {
+    background: rgba(15, 23, 42, 0.3);
+    border: 1px dashed rgba(255, 255, 255, 0.06);
+    border-radius: 24px;
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    text-align: left;
+
+    .summary-section-heading {
+      margin: 0 0 16px 0;
+      color: #ffffff;
+      font-size: 1.05rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.04);
+      padding-bottom: 6px;
+      width: 100%;
+    }
+
+    // Professional Summary Paragraph
+    .summary {
+      color: #94a3b8; // කියවන්න මාරම පහසු Slate Light Gray
+      font-size: 0.94rem;
+      line-height: 1.65;
+      font-weight: 500;
+      margin: 0;
+    }
   }
 
-  .summary {
-    color: $text-muted;
-    font-size: 1.1rem;
-    // max-width: 800px;
-  }
+  /* ========================================================
+     🎛️ INTEGRATED CONTACT & SOCIAL ACTION TERMINALS (ලින්ක්ස් කොටස)
+     ======================================================== */
+  .contact-info-grid-node {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 25px;
 
-  .contact-info {
-    margin-top: 1.5rem;
-    color: $text-muted;
-    // border-top: 1px solid rgba($text-main, 0.5);
+    @media (min-width: 480px) {
+      grid-template-columns: repeat(
+        2,
+        1fr
+      ); // Links ටික 2 Columns වලට ලස්සනට බෙදුවා
+    }
 
-    .contact-links,
-    .socail-links {
+    .contact-links-stack,
+    .social-links-stack {
       display: flex;
-      justify-content: flex-start;
-      //   align-items: center;
       flex-direction: column;
-      //   gap: 12px;
-      //   margin: 0.7rem 0;
-      border-bottom: 1px solid rgba($text-main, 0.5);
+      gap: 12px;
+    } // Universal Base Style for Anchors Links
+    .contact-item-anchor,
+    .contact-item-static,
+    .social-item-anchor {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      text-decoration: none !important;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      transition: all 0.3s ease;
 
-      span,
-      a {
-        margin: 0.5rem 0;
-        display: inline-block;
-        padding: 0 12px;
-        border-left: 5px solid rgba($text-main, 0.3);
-        border-radius: 6px;
+      .hud-meta-icon {
+        font-size: 0.95rem;
+        color: #64748b; // Muted Icons Default
+        transition: all 0.2s ease;
       }
     }
 
-    a {
-      color: white;
-      text-decoration: none;
+    /* 🚀 ACTIVE LINKS INTERACTIONS (මවුස් එක ගෙනිද්දී සන්නාම වර්ණ පත්තුවීම) */
+    .contact-item-anchor:hover {
+      color: #ffffff;
+      .hud-meta-icon {
+        color: #3b82f6;
+        transform: scale(1.1);
+      } // Blue Envelope/Phone
+    }
+
+    .link-portfolio:hover {
+      color: #00f1d1;
+      .hud-meta-icon {
+        color: #00f1d1;
+        filter: drop-shadow(0 0 4px #00f1d1);
+      }
+    }
+
+    .link-linkedin:hover {
+      color: #60a5fa;
+      .hud-meta-icon {
+        color: #3b82f6;
+        filter: drop-shadow(0 0 4px #3b82f6);
+      }
+    }
+
+    .link-github:hover {
+      color: #ffffff;
+      .hud-meta-icon {
+        color: #ffffff;
+        filter: drop-shadow(0 0 4px #ffffff);
+        transform: rotate(8deg);
+      }
+    }
+  }
+
+  /* ========================================================
+     🖨️ ACTION TRIGGER CONTROLLER BUTTON (ප්‍රින්ට් බොත්තම)
+     ======================================================== */
+  .btn-print {
+    background: linear-gradient(
+      135deg,
+      #2563eb 0%,
+      #1d4ed8 100%
+    ); /* Executive Blue Base */
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.92rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    margin-top: auto; // Push to bottom of card bounds
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 22px rgba(37, 99, 235, 0.55);
+      background: linear-gradient(
+        135deg,
+        #1d4ed8 0%,
+        #00f1d1 100%
+      ); // Hover වෙද්දී Neon Teal පැහැයට හැරේ
+    }
+
+    &:active {
+      transform: translateY(-1px);
     }
   }
 }
