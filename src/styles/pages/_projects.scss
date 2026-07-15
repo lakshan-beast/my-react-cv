@@ -1,80 +1,265 @@
-// src/styles/main.scss (Projects Styles)
+// // src/styles/main.scss (Projects Styles)
+
+// .projects-section {
+//   padding: 3rem 0;
+//   border-bottom: 1px solid $surface-color;
+
+//   h2 {
+//     font-size: 2rem;
+//     margin-bottom: 2rem;
+//     color: $accent-color;
+//   }
+
+//   // Cards ටික එක පෙළට හැඩගස්වන Grid එක
+//   .projects-grid {
+//     display: grid;
+//     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+//     gap: 1.5rem;
+//   }
+
+//   // තනි Card එකක ස්ටයිල්
+//   .project-card {
+//     background-color: $surface-color;
+//     padding: 1.5rem;
+//     border-radius: 8px;
+//     border: 1px solid transparent;
+//     transition: all 0.3s ease;
+
+//     &:hover {
+//       border-color: $accent-color;
+//       transform: translateY(-5px);
+//     }
+
+//     h3 {
+//       font-size: 1.3rem;
+//       margin-bottom: 0.5rem;
+//     }
+
+//     p {
+//       color: $text-muted;
+//       font-size: 0.95rem;
+//       margin-bottom: 1rem;
+//     }
+
+//     .project-links {
+//       display: flex;
+//       gap: 1rem;
+//       margin-bottom: 1rem;
+
+//       a {
+//         color: $text-main;
+//         font-size: 0.85rem;
+//         text-decoration: none;
+//         font-weight: 500;
+//         transition: color 0.2s ease;
+//         border: 1px solid rgba($text-muted, 0.6);
+//         border-radius: 2rem;
+//         padding: 6px 12px;
+
+//         &:hover {
+//           color: $accent-color; // Hover කළ විට Neon Green වේ
+//         }
+//       }
+//     }
+
+//     // Tech Stack (React, SASS) පෙන්වන Tags
+//     .tech-stack {
+//       display: flex;
+//       flex-wrap: wrap;
+//       gap: 0.5rem;
+
+//       span {
+//         background-color: rgba($accent-color, 0.1);
+//         color: $accent-color;
+//         padding: 0.25rem 0.6rem;
+//         border-radius: 4px;
+//         font-size: 0.8rem;
+//         font-weight: 500;
+//       }
+//     }
+//   }
+// }
+
+/* ========================================================
+   2026 NEXT-GEN CV PORTFOLIO - FEATURED PROJECTS REPOSITORY
+   ======================================================== */
 
 .projects-section {
   padding: 3rem 0;
-  border-bottom: 1px solid $surface-color;
+  width: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 
-  h2 {
-    font-size: 2rem;
+  // Main Section Title Heading (Featured Projects)
+  .section-bento-title {
+    font-size: 1.45rem;
+    font-weight: 850;
+    color: #ffffff; // පිරිසිදු සුදු පැහැය
+    letter-spacing: -0.01em;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     margin-bottom: 2rem;
-    color: $accent-color;
+    text-transform: uppercase;
+
+    .section-title-icon {
+      color: #00f1d1; // Header Icon එක පට්ටම Neon Teal කළා
+      font-size: 1.2rem;
+      filter: drop-shadow(0 0 4px rgba(0, 241, 209, 0.3));
+    }
   }
 
-  // Cards ටික එක පෙළට හැඩගස්වන Grid එක
+  // 💻 CARDS REPOSITORY MATRIX DOCK GRID (High-density 100% Fluid layout)
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(320px, 1fr)
+    ); // Responsive auto alignment grid sheet
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
   }
 
-  // තනි Card එකක ස්ටයිල්
+  /* 📄 INDIVIDUAL RESOURCE PROJECT CARD (Holographic Asset Tiles) */
   .project-card {
-    background-color: $surface-color;
-    padding: 1.5rem;
-    border-radius: 8px;
-    border: 1px solid transparent;
-    transition: all 0.3s ease;
+    // 👈 Core Change: පරණ පසුබිම වෙනුවට සරාගී Dark Glass Layer එකක් දුන්නා
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(255, 255, 255, 0.01) 100%
+    );
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
 
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 18px; // Smooth Apple Style Radii
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    box-sizing: border-box;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+    // 🚀 HOVER DEPTH INTERACTION: හොවර් වෙද්දී වටේට ලස්සන සයිබර් Teal ග්ලෝ එකක් පත්වේ
     &:hover {
-      border-color: $accent-color;
-      transform: translateY(-5px);
+      transform: translateY(-4px);
+      border-color: rgba(0, 241, 209, 0.2);
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.05) 0%,
+        rgba(255, 255, 255, 0.01) 100%
+      );
+      box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.35),
+        rgba(0, 241, 209, 0.05) 0px 0px 15px;
+
+      .project-title-heading {
+        color: #00f1d1;
+      } // Title glows Neon Teal
     }
 
-    h3 {
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
+    // Project Title Text String
+    .project-title-heading {
+      margin: 0;
+      color: #ffffff;
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      text-align: left;
+      transition: color 0.3s ease;
     }
 
-    p {
-      color: $text-muted;
-      font-size: 0.95rem;
-      margin-bottom: 1rem;
+    // Project Detailed Core Description
+    .project-description-text {
+      margin: 0;
+      color: #94a3b8; // Slate Comfortable Gray text
+      font-size: 0.88rem;
+      line-height: 1.55;
+      font-weight: 500;
+      text-align: left;
+      min-height: 80px; // Alignment ලස්සනට තියාගන්න උස සීමා කළා
     }
 
-    .project-links {
+    /* 🏷️ TECH STACK CAPSULES WRAPPER TAGS (React, SASS ලස්සන කුඩා බැජ්) */
+    .tech-stack-wrapper-tags {
       display: flex;
-      gap: 1rem;
-      margin-bottom: 1rem;
+      flex-wrap: wrap; // Auto wrap flow
+      gap: 6px;
+      width: 100%;
+      margin-top: auto; // Push components to bottom bounds
 
-      a {
-        color: $text-main;
-        font-size: 0.85rem;
-        text-decoration: none;
-        font-weight: 500;
-        transition: color 0.2s ease;
-        border: 1px solid rgba($text-muted, 0.6);
-        border-radius: 2rem;
-        padding: 6px 12px;
+      .tech-tag-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 4px 10px;
+        background: rgba(255, 255, 255, 0.02); // Clean dark capsule background
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        border-radius: 6px;
+        color: #cbd5e1;
+        font-size: 0.76rem;
+        font-weight: 600;
 
-        &:hover {
-          color: $accent-color; // Hover කළ විට Neon Green වේ
+        .tech-badge-dot {
+          color: #64748b; // Small muted gray icon dot
+          font-size: 0.7rem;
         }
       }
     }
 
-    // Tech Stack (React, SASS) පෙන්වන Tags
-    .tech-stack {
+    /* ========================================================
+       📥 PROJECT LINKS ACTION FOOTER HUB (ලයිව් ඩෙමෝ බොත්තම)
+       ======================================================== */
+    .project-links-footer-action-hub {
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
+      align-items: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 14px;
+      margin-top: 4px;
+      width: 100%;
+      box-sizing: border-box;
+      // View PDF/Live Demo Anchor Link Style (Executive Blue Base Bar)
+      .download-resource-btn-link {
+        width: 100%; // Mobile Friendly 100% full stretch width
+        padding: 10px 16px;
+        font-size: 0.84rem;
+        font-weight: 700;
+        text-align: center;
+        background: #2563eb; /* Executive Blue Gradient */
+        color: #ffffff !important;
+        border: none;
+        border-radius: 10px;
+        text-decoration: none !important;
+        box-shadow: rgba(37, 99, 235, 0.25) 0px 4px 12px;
 
-      span {
-        background-color: rgba($accent-color, 0.1);
-        color: $accent-color;
-        padding: 0.25rem 0.6rem;
-        border-radius: 4px;
-        font-size: 0.8rem;
-        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        box-sizing: border-box;
+
+        &:active {
+          transform: scale(0.97);
+        }
+
+        .link-arrow-icon {
+          font-size: 0.75rem;
+          transition: transform 0.3s ease;
+        }
+
+        // 🚀 BUTTON HOVER TRIGGER AURA EFFECT
+        &:hover {
+          background: #1d4ed8;
+          box-shadow: rgba(37, 99, 235, 0.5) 0px 6px 16px;
+          gap: 10px; // බටන් එක හොවර් වෙද්දී Arrow එක ලස්සනට ඈත් වේ!
+
+          .link-arrow-icon {
+            transform: translate(2px, -2px);
+          } // Arrow එක ඊතලයක් වගේ ඇලයට පාවේ!
+        }
       }
     }
   }
