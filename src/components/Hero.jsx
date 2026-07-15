@@ -1,46 +1,165 @@
-// src/components/Hero.jsx
+// import React from "react";
+
+// const Hero = () => {
+//   const handlePrint = () => {
+//     window.print();
+//   };
+
+//   return (
+//     <section className="hero-section">
+//       <h1>Lakshan Sandeepa</h1>
+//       <h2>Frontend Developer</h2>
+//       <p className="title">UI/UX Visual Engineering & Security Enthusiast</p>
+
+//       <p className="summary">
+//         Results-driven and highly autonomous Frontend Developer with a proven
+//         track record of engineering scalable web applications and
+//         high-performance SaaS ecosystems. Recognized for exceptional
+//         self-learning abilities and an analytical approach to complex technical
+//         problem-solving. Proficient in React.js and SASS blueprinting, with
+//         extensive hands-on experience integrating serverless cloud layers
+//         (Firebase) to stream real-time data components with zero-latency
+//         reflection. Passionate about clean code architecture, reusable UI design
+//         systems, and converting intricate operational workflows into responsive,
+//         interactive user experiences.
+//       </p>
+
+//       <div className="contact-info">
+//         <div className="contact-links">
+//           <a
+//             href="mailto:lakshansandeepa0305@gmail.com"
+//             target="_blank"
+//             rel="noreferrer">
+//             lakshansandeepa0305@gmail.com
+//           </a>
+//           <a href="tel:+94 707046840">+94 707046840</a>
+//           <span>Kandy / Sri Lanka</span>
+//         </div>
+
+//         <div className="socail-links">
+//           <a
+//             href="https://lakshan-sandeepa-dev.vercel.app/"
+//             target="_blank"
+//             rel="noreferrer">
+//             Portofolio
+//           </a>
+//           <a
+//             href="https://www.linkedin.com/in/lakshan-sandeepa"
+//             target="_blank"
+//             rel="noreferrer">
+//             Linkedin Profile
+//           </a>
+//           <a
+//             href="https://github.com/lakshan-beast"
+//             target="_blank"
+//             rel="noreferrer">
+//             Github Profile
+//           </a>
+
+//           <a href=""></a>
+//         </div>
+//       </div>
+
+//       <button onClick={handlePrint} className="btn-print">
+//         Print / Save as PDF CV
+//       </button>
+//     </section>
+//   );
+// };
+
+// export default Hero;
+
 import React from "react";
+import {
+  FaEnvelope,
+  FaPhone,
+  FaMapMarkerAlt,
+  FaGlobe,
+  FaLinkedin,
+  FaGithub,
+  FaArrowDown,
+  FaPrint,
+} from "react-icons/fa";
 
 const Hero = () => {
-  // Print Window එක Open කරන Function එක
   const handlePrint = () => {
     window.print();
   };
 
   return (
     <section className="hero-section">
-      <h1>Frontend Developer</h1>
-      <h2>Lakshan Sandeepa</h2>
+      {/* 🛸 LEFT PANEL: METADATA & PRIMARY PROFILE IDENTITY */}
+
+      <h1 className="developer-main-name">Lakshan Sandeepa</h1>
+      <h2 className="developer-core-role">Frontend Developer</h2>
       <p className="title">UI/UX Visual Engineering & Security Enthusiast</p>
 
-      <p className="summary">
-        Results-driven and highly autonomous Frontend Developer with a proven
-        track record of engineering scalable web applications and
-        high-performance SaaS ecosystems. Recognized for exceptional
-        self-learning abilities and an analytical approach to complex technical
-        problem-solving. Proficient in React.js and SASS blueprinting, with
-        extensive hands-on experience integrating serverless cloud layers
-        (Firebase) to stream real-time data components with zero-latency
-        reflection. Passionate about clean code architecture, reusable UI design
-        systems, and converting intricate operational workflows into responsive,
-        interactive user experiences.
-      </p>
+      {/* INTEGRATED CONTACT & SOCIAL ACTION TERMINALS */}
+      <div className="contact-info-grid-node">
+        <div className="contact-links-stack">
+          <a
+            href="mailto:lakshansandeepa0305@gmail.com"
+            target="_blank"
+            rel="noreferrer"
+            className="contact-item-anchor">
+            <FaEnvelope className="hud-meta-icon" />{" "}
+            lakshansandeepa0305@gmail.com
+          </a>
+          <a href="tel:+94 707046840" className="contact-item-anchor">
+            <FaPhone className="hud-meta-icon" /> +94 707046840
+          </a>
+          <span className="contact-item-static">
+            <FaMapMarkerAlt className="hud-meta-icon" /> Kandy / Sri Lanka
+          </span>
+        </div>
 
-      <div className="contact-info">
-        <span>📧 lakshansandeepa0305@gmail.com</span>
-        <span>📞 +94 707046840</span>
-        <span>📍 Kandy / Sri Lanka</span>
-
-        <hr />
-        <span>https://lakshan-sandeepa-dev.vercel.app/</span>
-        <span>https://www.linkedin.com/in/lakshan-sandeepa</span>
-        <span>https://www.linkedin.com/in/lakshan-sandeepa</span>
+        <div className="social-links-stack">
+          <a
+            href="https://lakshan-sandeepa-dev.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+            className="social-item-anchor link-portfolio">
+            <FaGlobe className="hud-meta-icon" /> Portfolio
+          </a>
+          <a
+            href="https://www.linkedin.com/in/lakshan-sandeepa"
+            target="_blank"
+            rel="noreferrer"
+            className="social-item-anchor link-linkedin">
+            <FaLinkedin className="hud-meta-icon" /> Linkedin Profile
+          </a>
+          <a
+            href="https://github.com/lakshan-beast"
+            target="_blank"
+            rel="noreferrer"
+            className="social-item-anchor link-github">
+            <FaGithub className="hud-meta-icon" /> Github Profile
+          </a>
+        </div>
       </div>
 
-      {/* මේ බටන් එක ක්ලික් කළ විට වෙබ් පිටුව CV එකක් ලෙස මුද්‍රණය වේ */}
+      {/* ACTION TRIGGER CONTROLLER BUTTON */}
       <button onClick={handlePrint} className="btn-print">
-        Print / Save as PDF CV
+        <FaPrint /> Print / Save as PDF CV
       </button>
+      {/* </div> */}
+
+      {/* 🧠 RIGHT PANEL: THE PROFESSIONAL OBJECTIVE VAULT */}
+      <div className="profile-summary-bento-card">
+        <h3 className="summary-section-heading">Executive Core Summary</h3>
+        <p className="summary">
+          Results-driven and highly autonomous Frontend Developer with a proven
+          track record of engineering scalable web applications and
+          high-performance SaaS ecosystems. Recognized for exceptional
+          self-learning abilities and an analytical approach to complex
+          technical problem-solving. Proficient in React.js and SASS
+          blueprinting, with extensive hands-on experience integrating
+          serverless cloud layers (Firebase) to stream real-time data components
+          with zero-latency reflection. Passionate about clean code
+          architecture, reusable UI design systems, and converting intricate
+          operational workflows into responsive, interactive user experiences.
+        </p>
+      </div>
     </section>
   );
 };

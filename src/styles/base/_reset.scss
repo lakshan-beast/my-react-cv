@@ -12,6 +12,17 @@ body {
   line-height: 1.6;
 }
 
+$font-main: "Poppins", sans-serif;
+$font-heading: "JetBrains Mono", monospace;
+h1,
+h2,
+h3,
+button,
+a {
+  font-family: $font-heading;
+  font-weight: 700;
+}
+
 .container {
   max-width: 1000px;
   margin: 0 auto;

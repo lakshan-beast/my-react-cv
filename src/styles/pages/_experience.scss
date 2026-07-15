@@ -1,43 +1,215 @@
-// Experience කොටසේ ස්ටයිල්
+// // Experience කොටසේ ස්ටයිල්
+// .experience-section {
+//   padding: 3rem 0 1.5rem 0;
+
+//   h2 {
+//     font-size: 2rem;
+//     margin-bottom: 1.5rem;
+//     color: $accent-color;
+//   }
+
+//   .experience-card {
+//     background-color: $surface-color;
+//     padding: 1.5rem;
+//     border-radius: 8px;
+//     border-left: 4px solid $accent-color; // වමෙන් ලස්සන Neon Green ඉරක්
+
+//     h3 {
+//       font-size: 1.3rem;
+//       margin-bottom: 0.3rem;
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+
+//       .date {
+//         font-size: 0.9rem;
+//         color: $text-muted;
+//         font-weight: normal;
+//       }
+//     }
+
+//     .company {
+//       color: rgba($accent-color, 0.7);
+//       font-weight: 600;
+//       letter-spacing: 1.2px;
+//       font-size: 1rem;
+//       border-top: 1px solid rgba($text-muted, 0.7);
+//       margin-bottom: 0.75rem;
+//     }
+
+//     p {
+//       color: $text-muted;
+//       font-size: 0.95rem;
+//     }
+//   }
+// }
+
+/* ========================================================
+   2026 NEXT-GEN CV PORTFOLIO - WORK EXPERIENCE REPOSITORY
+   ======================================================== */
+
 .experience-section {
   padding: 3rem 0 1.5rem 0;
+  width: 100%;
+  box-sizing: border-box;
 
-  h2 {
-    font-size: 2rem;
+  // Main Section Heading Title (Work Experience)
+  .section-bento-heading {
+    font-size: 1.45rem;
+    font-weight: 850;
+    color: #ffffff; // පිරිසිදු සුදු පැහැය
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     margin-bottom: 1.5rem;
-    color: $accent-color;
+    text-transform: uppercase;
+
+    .section-title-icon {
+      color: #00f1d1; // Header Icon එක පට්ටම Neon Teal කළා
+      font-size: 1.2rem;
+      filter: drop-shadow(0 0 4px rgba(0, 241, 209, 0.3));
+    }
   }
 
-  .experience-card {
-    background-color: $surface-color;
-    padding: 1.5rem;
-    border-radius: 8px;
-    border-left: 4px solid $accent-color; // වමෙන් ලස්සන Neon Green ඉරක්
+  /* 🏢 THE CORE EXPERIENCE GLASS TILE CARD */
+  .experience-bento-tile-card {
+    // 👈 Core Change: පරණ පසුබිම වෙනුවට සරාගී Dark Glass Layer එකක් දුන්නා
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.03) 0%,
+      rgba(255, 255, 255, 0.01) 100%
+    );
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
 
-    h3 {
-      font-size: 1.3rem;
-      margin-bottom: 0.3rem;
+    // 📍 වටේට සිහින් බෝඩර් එකක් සහ වම් පැත්තෙන් ලස්සන Neon Teal ඉරක් සෙට් කළා
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-left: 4px solid #00f1d1;
+
+    border-radius: 16px;
+    padding: 24px 28px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+    &:hover {
+      transform: translateY(-3px);
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.05) 0%,
+        rgba(255, 255, 255, 0.01) 100%
+      );
+      box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.35),
+        rgba(0, 241, 209, 0.05) 0px 0px 15px;
+    }
+
+    /* --- CARD UPPER META HEADER BAR --- */
+    .tile-upper-header-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap; // Mobile Friendly wrapping support
+      gap: 10px;
+      width: 100%;
 
-      .date {
-        font-size: 0.9rem;
-        color: $text-muted;
-        font-weight: normal;
+      .role-title-text {
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: #ffffff;
+        letter-spacing: -0.01em;
+        text-align: left;
+      }
+
+      // Timeline Date Capsule Badge (Jan 2026 - Present)
+      .timeline-date-badge {
+        font-size: 0.78rem;
+        font-weight: 800;
+        color: #00f1d1; // Neon Teal Text
+        background: rgba(0, 241, 209, 0.08); /* Soft Teal Alpha Base */
+        padding: 5px 12px;
+        border-radius: 20px;
+        border: 1px solid rgba(0, 241, 209, 0.15);
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-family: monospace;
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
       }
     }
 
-    .company {
-      color: $accent-color;
-      font-weight: 500;
-      font-size: 1rem;
-      margin-bottom: 0.75rem;
+    /* --- COMPANY BRANDING LINE --- */
+    .company-branding-subtext {
+      margin: 8px 0 20px 0;
+      color: #94a3b8; // Slate Gray Light Text
+      font-weight: 700;
+      font-size: 0.88rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04); // සිහින් වෙන් කිරීමේ ඉර
+      padding-bottom: 10px;
+      text-align: left;
+
+      svg {
+        color: #64748b;
+        font-size: 0.95rem;
+      }
     }
 
-    p {
-      color: $text-muted;
-      font-size: 0.95rem;
+    /* ========================================================
+       🧾 HIGH-DENSITY BULLET NODES STACK (කරණු 4 පේළිය)
+       ======================================================== */
+    .experience-bullet-nodes-stack {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 100%;
+
+      li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        text-align: left;
+        width: 100%;
+
+        // Real-time Check Circle Icon (කුඩා නිල්-කොළ හරි ලකුණ)
+        .bullet-node-check-icon {
+          color: rgba(0, 241, 209, 0.35); // Dim Neon Teal Default
+          font-size: 0.95rem;
+          margin-top: 3px;
+          flex-shrink: 0;
+          transition: all 0.3s ease;
+        }
+        span {
+          color: #cbd5e1; // කියවන්න මාරම සුවපහසු මෘදු පැහැය
+          font-size: 0.92rem;
+          line-height: 1.55;
+          font-weight: 500;
+          transition: color 0.3s ease;
+        }
+
+        // Row Hover Vibe (කරණක් උඩට යද්දී ඒක විතරක් සුදු වී අයිකන් එක පත්තුවේ)
+        &:hover {
+          .bullet-node-check-icon {
+            color: #00f1d1;
+            filter: drop-shadow(0 0 4px #00f1d1);
+          }
+          span {
+            color: #ffffff;
+          }
+        }
+      }
     }
   }
 }
