@@ -23,7 +23,7 @@ const Projects = () => {
       desc: "Designed and developed a premium, conversion-optimized e-commerce storefront frontend utilizing advanced component blueprinting. Engineered custom relational client-side search engines and multi-tier fuzzy product filtering algorithms.",
       tech: [
         "React.js",
-        "SASS Blueprinting",
+        "Tailwind CSS",
         "State Management",
         "Fuzzy Search Engine",
       ],
