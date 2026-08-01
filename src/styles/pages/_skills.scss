@@ -1,159 +1,11 @@
-// // src/styles/main.scss (Skills & Education Styles)
-
-// .info-grid {
-//   display: grid;
-//   grid-template-columns: 1fr; // වම් පැත්තේ Skills, දකුණු පැත්තේ Education
-//   gap: 2.5rem;
-//   padding: 3rem 0;
-//   border-bottom: 1px solid $surface-color;
-
-//   @media (max-width: 768px) {
-//     grid-template-columns: 1fr; // මොබයිල් ෆෝන් වලදී එකක් යට එකක් පෙනේ
-//   }
-
-//   h2 {
-//     font-size: 2rem;
-//     margin-bottom: 1.5rem;
-//     color: $accent-color;
-//   }
-// }
-
-// // Skills කොටසේ ස්ටයිල්
-// .skills-section {
-//   .skills-group {
-//     margin-bottom: 1.5rem;
-
-//     h3 {
-//       font-size: 1.1rem;
-//       margin-bottom: 0.5rem;
-//       color: $text-main;
-
-//       border-top: 1px solid rgba($text-muted, 0.6);
-//       padding-top: 6px;
-//     }
-//   }
-
-//   .skills-tags {
-//     display: flex;
-//     flex-wrap: wrap;
-//     gap: 0.5rem;
-
-//     span {
-//       background-color: $surface-color;
-//       padding: 0.4rem 0.8rem;
-//       border-radius: 6px;
-//       font-size: 0.9rem;
-//     }
-//   }
-// }
-
-// // src/styles/main.scss ඇතුළත
-
-// .skills-section {
-//   .skills-group {
-//     margin-bottom: 1.25rem; // Groups අතර පරතරය තරමක් අඩු කර පිළිවෙළක් කළා
-
-//     h3 {
-//       font-size: 1.05rem;
-//       color: rgba($accent-color, 0.6);
-//       margin-bottom: 0.4rem;
-//     }
-//   }
-// }
-
-// // Education කොටසේ ස්ටයිල්
-// .education-section {
-//   .edu-item {
-//     margin-bottom: 1.5rem;
-
-//     h3 {
-//       font-size: 1.2rem;
-//       margin-bottom: 0.2rem;
-//       border-top: 1px solid rgba($text-muted, 0.6);
-//       padding-top: 6px;
-//     }
-
-//     .school {
-//       color: rgba($accent-color, 0.7);
-//       font-weight: 500;
-//       font-size: 1rem;
-//     }
-
-//     .year {
-//       background-color: rgba($text-muted, 0.2);
-//       color: $accent-color;
-//       border-radius: 6px;
-//       font-size: 0.85rem;
-//       padding: 4px 12px;
-//       display: inline-block;
-//     }
-//   }
-// }
-
-// // ==========================================
-// // PRINT STYLES කොටස ඇතුළට මේක දාන්න
-// // ==========================================
-// @media print {
-//   .info-grid {
-//     display: block !important; // Print එකේදී Grid එක අයින් වී එක පෙළට සැකසේ
-//     padding: 1rem 0 !important;
-//     border-bottom: 1px solid #000 !important;
-
-//     h2 {
-//       font-size: 14pt !important;
-//       color: #000 !important;
-//       margin-bottom: 0.5rem !important;
-//     }
-//   }
-
-//   .skills-section,
-//   .education-section {
-//     margin-bottom: 1rem !important;
-//     page-break-inside: avoid;
-
-//     .skills-group {
-//       margin-bottom: 1.25rem; // Groups අතර පරතරය තරමක් අඩු කර පිළිවෙළක් කළා
-
-//       h3 {
-//         font-size: 1.05rem;
-//         color: $text-muted;
-//         margin-bottom: 0.4rem;
-//       }
-//     }
-//   }
-
-//   .skills-tags span {
-//     background: none !important;
-//     border: 1px solid #ccc !important;
-//     color: #000 !important;
-//     font-size: 9pt !important;
-//     padding: 0.1rem 0.4rem !important;
-//   }
-
-//   .edu-item {
-//     margin-bottom: 0.75rem !important;
-//     h3 {
-//       font-size: 11pt !important;
-//     }
-//     .school {
-//       color: #000 !important;
-//       font-size: 10pt !important;
-//     }
-//     .year {
-//       color: #444 !important;
-//       font-size: 9pt !important;
-//     }
-//   }
-// }
-
 /* ========================================================
    2026 NEXT-GEN CV PORTFOLIO - TECHNICAL SKILLS & EDUCATION
    ======================================================== */
 
-// 🏛️ MAIN DOUBLE-PANEL REPOSITORY GRID (ලොකු තිර වලදී ලස්සනට පැනල් 2ක් වේ)
+// 🏛️ MAIN DOUBLE-PANEL REPOSITORY GRID
 .info-grid {
   display: grid;
-  grid-template-columns: 1fr; // 📱 Mobile 1 Column
+  grid-template-columns: 1fr;
   gap: 35px;
   padding: 3rem 0;
   width: 100%;
@@ -161,7 +13,7 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 
   @media (min-width: 900px) {
-    grid-template-columns: 1.1fr 0.9fr; // 💻 Laptop/Desktop පැනල් 2ක Luxury Split Layout එකක් වේ
+    grid-template-columns: 1.1fr 0.9fr;
     align-items: start;
   }
 
@@ -169,7 +21,7 @@
   .section-bento-title {
     font-size: 1.4rem;
     font-weight: 850;
-    color: #ffffff; // පිරිසිදු සුදු පැහැය
+    color: #ffffff;
     letter-spacing: -0.01em;
     display: inline-flex;
     align-items: center;
@@ -178,7 +30,7 @@
     text-transform: uppercase;
 
     .title-icon {
-      color: #00f1d1; // Main Title Icons පට්ටම Neon Teal කළා
+      color: #00f1d1;
       font-size: 1.15rem;
       filter: drop-shadow(0 0 4px rgba(0, 241, 209, 0.3));
     }
@@ -186,7 +38,7 @@
 }
 
 /* ========================================================
-   🛠️ A. PROFESSIONAL TECHNICAL SKILLS BOARD (වම් පැත්ත)
+   🛠️ A. PROFESSIONAL TECHNICAL SKILLS BOARD
    ======================================================== */
 .skills-section {
   width: 100%;
@@ -212,24 +64,23 @@
       gap: 8px;
 
       .sub-group-icon {
-        color: #64748b; // Sub group icon Slate
+        color: #64748b;
         font-size: 0.9rem;
       }
     }
   }
 
-  /* 🏷️ CYBER NEON CAPSULES BLUEPRINTS (කුඩා දත්ත ටැග්ස්) */
+  /* 🏷️ CYBER NEON CAPSULES BLUEPRINTS  */
   .skills-tags {
     display: flex;
-    flex-wrap: wrap; // Auto wrapping alignment support
+    flex-wrap: wrap;
     gap: 8px;
     width: 100%;
 
     span {
-      // 👈 Core Change: පරණ අළු කොටු වෙනුවට Transparent Alpha Badges දුන්නා
       background: rgba(255, 255, 255, 0.02);
       border: 1px solid rgba(255, 255, 255, 0.05);
-      color: #cbd5e1; // Screen comfortable soft white text
+      color: #cbd5e1;
 
       padding: 6px 14px;
       border-radius: 8px;
@@ -237,7 +88,6 @@
       font-weight: 600;
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 
-      // 🚀 HOVER FLASH: මවුස් එක ගෙනිච්ච සැනින් ටැග් එක පට්ටම ලස්සන Neon Teal වලින් පාවේ!
       &:hover {
         background: rgba(0, 241, 209, 0.08) !important;
         border-color: #00f1d1 !important;
@@ -250,7 +100,7 @@
 }
 
 /* ========================================================
-   🎓 B. EDUCATION & CREDENTIALS INTERFACE BOARD (දකුණු පැත්ත)
+   🎓 B. EDUCATION & CREDENTIALS INTERFACE BOARD
    ======================================================== */
 .education-section {
   width: 100%;
@@ -261,7 +111,7 @@
   .edu-item {
     background: rgba(15, 23, 42, 0.25);
     border: 1px solid rgba(255, 255, 255, 0.03);
-    border-left: 3px solid #2563eb; // 👈 Left side Executive Blue Accent Line
+    border-left: 3px solid #2563eb;
     padding: 18px 22px;
     border-radius: 0 14px 14px 0;
     margin-bottom: 14px;
@@ -271,7 +121,7 @@
 
     &:hover {
       background: rgba(15, 23, 42, 0.45);
-      border-left-color: #00f1d1; // Hover වෙද්දී ඉර Teal පාට වේ
+      border-left-color: #00f1d1;
     }
 
     // Degree / Examination Title
@@ -292,14 +142,14 @@
       display: flex;
       align-items: center;
       gap: 6px;
-      // In Progress certifications text styles
+
       &.text-glow-blue {
         color: #cbd5e1;
         margin-bottom: 6px;
         font-weight: 500;
 
         .cert-check {
-          color: #2563eb; // Certificate verification icon blue
+          color: #2563eb;
           font-size: 0.95rem;
           flex-shrink: 0;
         }
@@ -321,7 +171,7 @@
       font-family: monospace;
 
       &.expected-badge {
-        color: #fbbf24; // Expected 2026 Badge glows Gold warning style
+        color: #fbbf24;
         background: rgba(251, 191, 36, 0.06);
         border-color: rgba(251, 191, 36, 0.12);
         margin-top: 6px;
@@ -331,6 +181,6 @@
 
   // Special Highlight layout for certifications box block
   .certifications-live-node {
-    border-left-color: #f59e0b; // Progressing block left accent line gold
+    border-left-color: #f59e0b;
   }
 }
