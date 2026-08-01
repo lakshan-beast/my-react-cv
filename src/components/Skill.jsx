@@ -23,7 +23,9 @@ const SkillsAndEdu = () => {
           </h3>
           <div className="skills-tags">
             <span>React.js</span>
+            <span>Tailwind CSS</span>
             <span>SASS / SCSS Blueprinting</span>
+            <span>TypeScript</span>
             <span>JavaScript (ES6+)</span>
             <span>HTML5 & CSS3</span>
             <span>Responsive Web Design</span>
