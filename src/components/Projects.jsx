@@ -18,24 +18,33 @@ const Projects = () => {
       ],
       live: "https://educa-lms-platform.vercel.app/",
     },
+
     {
-      title: "Zestara | in process",
-      desc: "Designed and developed a premium, conversion-optimized e-commerce storefront frontend utilizing advanced component blueprinting. Engineered custom relational client-side search engines and multi-tier fuzzy product filtering algorithms.",
-      tech: [
-        "React.js",
-        "Tailwind CSS",
-        "State Management",
-        "Fuzzy Search Engine",
-      ],
-      // live: "https://zestara.vercel.app",
-      live: "",
+      title: "Unseen_Tapro | in process",
+      desc: "A travel exploration platform dedicated to uncovering and showcasing the hidden gems and offbeat destinations of Sri Lanka through an interactive, responsive web experience.",
+      tech: ["React.js", "Tailwind CSS", "TypeScript", "Firebase"],
+      live: "https://unseen-tapro.vercel.app/",
     },
+
+    // {
+    //   title: "Zestara | in process",
+    //   desc: "Designed and developed a premium, conversion-optimized e-commerce storefront frontend utilizing advanced component blueprinting. Engineered custom relational client-side search engines and multi-tier fuzzy product filtering algorithms.",
+    //   tech: [
+    //     "React.js",
+    //     "Tailwind CSS",
+    //     "State Management",
+    //     "Fuzzy Search Engine",
+    //   ],
+    //   // live: "https://zestara.vercel.app",
+    //   live: "",
+    // },
     {
       title: "Dream Tracker",
       desc: "Architected an interactive academic tracker featuring gamified focus timers and real-time behavioral data structures. Programmed automated study schedulers and rendered high-density performance indices using Recharts.",
       tech: ["React.js", "SASS Blueprinting", "Recharts", "Firebase Firestore"],
       live: "https://future-plan-six.vercel.app",
     },
+
     {
       title: "info.lanka | (Js Practice | first project)",
       desc: "Built a fully responsive civic services index portal aggregating access metrics for over 200+ verified public sectors. Implemented a lightning-fast client-side keyword search engine running fuzzy matching loops over local JSON data.",
