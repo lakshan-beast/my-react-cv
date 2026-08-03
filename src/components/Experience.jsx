@@ -25,8 +25,8 @@ const Experience = () => {
             <FaCircleCheck className="bullet-node-check-icon" />
             <span>
               Architected and deployed responsive, pixel-perfect web interfaces
-              using React.js (Vite) and SASS blueprinting based on complex user
-              and client specifications.
+              using React.js (Vite), TypeScript and TailwindCSS based on complex
+              user and client specifications.
             </span>
           </li>
           <li>

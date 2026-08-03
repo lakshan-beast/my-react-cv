@@ -76,7 +76,7 @@ const Hero = () => {
           track record of engineering scalable web applications and
           high-performance SaaS ecosystems. Recognized for exceptional
           self-learning abilities and an analytical approach to complex
-          technical problem-solving. Proficient in React.js and SASS
+          technical problem-solving. Proficient in React.js, Typescript and TailwindCSS
           blueprinting, with extensive hands-on experience integrating
           serverless cloud layers (Firebase) to stream real-time data components
           with zero-latency reflection. Passionate about clean code
