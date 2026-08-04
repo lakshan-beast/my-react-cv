@@ -3,7 +3,7 @@
 
 An advanced, conversion-optimized, and highly responsive interactive web application built with React.js and SASS [INDEX 4]. This application functions as a live digital portfolio web page while dynamically transforming into a clean, professional, print-ready A4 PDF CV using specialized @media print styling rules.
 
-🟢 Live Preview: [your-project-name.vercel.app](https://vercel.app)
+🟢 Live Preview: [(https://lakshan-sandeepa-cv.vercel.app/)](https://lakshan-sandeepa-cv.vercel.app/)
 
 ---
 
