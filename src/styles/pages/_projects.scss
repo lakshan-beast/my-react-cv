@@ -129,7 +129,10 @@
        ======================================================== */
     .project-links-footer-action-hub {
       display: flex;
+      flex-direction: column;
+      justify-content: center;
       align-items: center;
+      gap: 6px;
       border-top: 1px solid rgba(255, 255, 255, 0.05);
       padding-top: 14px;
       margin-top: 4px;

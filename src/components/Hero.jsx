@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   FaEnvelope,
   FaPhone,
@@ -67,7 +68,6 @@ const Hero = () => {
       <button onClick={handlePrint} className="btn-print">
         <FaPrint /> Print / Save as PDF CV
       </button>
-      {/* </div> */}
 
       <div className="profile-summary-bento-card">
         <h3 className="summary-section-heading">Executive Core Summary</h3>

@@ -1,6 +1,7 @@
 import React from "react";
-import { FaBriefcase, FaBuilding, FaCircleCheck } from "react-icons/fa6";
+
 import { FaCalendarAlt } from "react-icons/fa";
+import { FaBriefcase, FaBuilding, FaCircleCheck } from "react-icons/fa6";
 
 const Experience = () => {
   return (

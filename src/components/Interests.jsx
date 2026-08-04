@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   FaCompass,
   FaShieldHalved,
@@ -54,11 +55,11 @@ const Interests = () => {
           </h3>
           <div className="languages-capsules-stack">
             <p className="lang-row-node">
-              <FaCircleCheck className="lang-check" />{" "}
+              <FaCircleCheck className="lang-check" />
               <span>Sinhala (Native)</span>
             </p>
             <p className="lang-row-node">
-              <FaCircleCheck className="lang-check" />{" "}
+              <FaCircleCheck className="lang-check" />
               <span>English (Professional Working Proficiency)</span>
             </p>
           </div>

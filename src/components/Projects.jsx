@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   FaFolderOpen,
   FaArrowUpRightFromSquare,
@@ -17,13 +18,15 @@ const Projects = () => {
         "Web Security",
       ],
       live: "https://educa-lms-platform.vercel.app/",
+      code: "https://github.com/lakshan-beast/Educa-LMS-Platform",
     },
 
     {
       title: "Unseen_Tapro | in process",
       desc: "A travel exploration platform dedicated to uncovering and showcasing the hidden gems and offbeat destinations of Sri Lanka through an interactive, responsive web experience.",
       tech: ["React.js", "Tailwind CSS", "TypeScript", "Firebase"],
-      live: "https://unseen-tapro.vercel.app/",
+      live: "https://unseentapro.vercel.app/",
+      code: "https://github.com/lakshan-beast/Unseen-Tapro",
     },
 
     // {
@@ -39,10 +42,11 @@ const Projects = () => {
     //   live: "",
     // },
     {
-      title: "Dream Tracker",
+      title: "Dream Tracker | Old Version",
       desc: "Architected an interactive academic tracker featuring gamified focus timers and real-time behavioral data structures. Programmed automated study schedulers and rendered high-density performance indices using Recharts.",
       tech: ["React.js", "SASS Blueprinting", "Recharts", "Firebase Firestore"],
       live: "https://future-plan-six.vercel.app",
+      code: "https://github.com/lakshan-beast/Future-Plan",
     },
 
     {
@@ -50,6 +54,7 @@ const Projects = () => {
       desc: "Built a fully responsive civic services index portal aggregating access metrics for over 200+ verified public sectors. Implemented a lightning-fast client-side keyword search engine running fuzzy matching loops over local JSON data.",
       tech: ["React.js", "SASS Blueprinting", "Keyword Algorithms"],
       live: "https://info-lanka-project.vercel.app",
+      code: "https://github.com/lakshan-beast/info.lanka-Project",
     },
   ];
 
@@ -79,8 +84,16 @@ const Projects = () => {
                 target="_blank"
                 rel="noreferrer"
                 className="download-resource-btn-link">
-                Live Demo{" "}
+                Live Demo
                 <FaArrowUpRightFromSquare className="link-arrow-icon" />
+              </a>
+
+              <a
+                href={project.code}
+                target="_blank"
+                className="download-resource-btn-link"
+                rel="noopener noreferrer">
+                Github Code
               </a>
             </div>
           </div>
