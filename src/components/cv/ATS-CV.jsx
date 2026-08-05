@@ -88,7 +88,6 @@ const ResumeTwoColumn = () => {
                     fontWeight: "600",
                     margin: "2px 0 4px 0",
                   }}>
-                  {/* Tech Stack:{" "} */}
                   {proj.tags ? proj.tags.join(", ") : proj.techStack}
                 </p>
                 <p
@@ -115,7 +114,7 @@ const ResumeTwoColumn = () => {
               •<a href={`mailto:${personalInfo.email}`}>{personalInfo.email}</a>
             </li>
             <li>
-              •{" "}
+              •
               <a
                 href={personalInfo.links.portfolio}
                 target="_blank"
@@ -124,7 +123,7 @@ const ResumeTwoColumn = () => {
               </a>
             </li>
             <li>
-              •{" "}
+              •
               <a
                 href={personalInfo.links.github}
                 target="_blank"
@@ -133,7 +132,7 @@ const ResumeTwoColumn = () => {
               </a>
             </li>
             <li>
-              •{" "}
+              •
               <a
                 href={personalInfo.links.linkedin}
                 target="_blank"

@@ -1,5 +1,5 @@
 import React from "react";
-import ATS_CV from "./components/cv/New";
+import ATS_CV from "./components/cv/ATS-CV";
 
 function App() {
   return (
